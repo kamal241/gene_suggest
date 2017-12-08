@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # This script automatically sets up the gene_suggest api to run on virtual environment
 # Go through the SETUP_API.md before running this application
@@ -17,7 +17,7 @@ virtualenv gsa_dtest
 # Activate the virtual environment
 # $ /home/GSA# source gsa_dtest/bin/activate
 
-source gsa_dtest/bin/activate
+source ./gsa_dtest/bin/activate
 
 # Go to the gene_suggest directory
 # (gsa_dtest) $ /home/GSA# cd gene_suggest

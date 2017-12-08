@@ -9,8 +9,7 @@ if gsa_home is not None:
 		dbs_reader = csv.DictReader(dbsf)
 		db_config = dbs_reader.next()
 else:
-	dbs_path = os.path.join("settings","db_settings.csv")
-	print dbs_path
+	dbs_path = os.path.join("settings","db_settings.csv")	
 	with open(dbs_path) as dbsf:
 		dbs_reader = csv.DictReader(dbsf)
 		db_config = dbs_reader.next()

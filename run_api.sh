@@ -1,12 +1,24 @@
-#!/bin/sh
+#!/bin/bash
+
+port=5000
+if [ $# -eq 0 ]; then
+	echo "Using default port $port"
+else
+	port=$1
+	echo "Application is runnung on port $port"
+fi
+
 
 venvdir=gsa_dtest
 gsadir=gene_suggest
 if [ -d "$gsadir" ]; then
 	if [ -d "$venvdir" ]; then
-		source gsa_dtest/bin/activate
+		source ./gsa_dtest/bin/activate
+		echo "Source Commpleted"
 		cd gene_suggest
-		python run.py
+		echo "In gene_suggest"
+		python run.py $port
+		echo "Running application at port $port"
 	else
 		echo "It seems that virtual environment does not exist"
 		echo "Either run setup_api.sh or Follow the steps as per SETUP_API.md"		
