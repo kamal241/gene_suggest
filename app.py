@@ -42,7 +42,7 @@ class Gene(Resource):
 					  True if requested type is unspecified or is JSON
 		"""		
 		if ctype:
-			if ctype not in ['*/*','application/json','text/json',None]:							
+			if ctype not in ['*/*','application/json','text/json', 'text/html', None]:							
 				not_accepted_msg = '%s not supported. Supported types application/json, text/json' % ctype
 				abort(406,not_accepted_msg)
 
